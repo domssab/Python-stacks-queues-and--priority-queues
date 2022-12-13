@@ -1,4 +1,4 @@
-from queues import Queue
+from QueueNo2 import Queue
 
 fifo = Queue("1st", "2nd", "3rd")
 len(fifo)
