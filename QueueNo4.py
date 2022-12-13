@@ -1,12 +1,11 @@
-from QueueNo2 import Queue
+from collections import deque
 
-fifo = Queue("1st", "2nd", "3rd")
-len(fifo)
+class Queue:
+    def __init__(self):
+        self.elements = deque()
 
+    def enqueue(self, element):
+        self.elements.append(element)
 
-for element in fifo:
-    print(element)
-
-class Stack(Queue):
     def dequeue(self):
-        return self._elements.pop()
+        return self.elements.popleft()
